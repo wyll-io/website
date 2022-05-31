@@ -1,0 +1,6 @@
+baseURL = 'https://wyll.io/'
+languageCode = 'fr-fr'
+title = 'Wyll - DevOps Cloud Data - Toulouse - Montpellier - Bordeaux'
+
+[build]
+  writeStats = true
