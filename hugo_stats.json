@@ -28,6 +28,7 @@
       "script",
       "section",
       "span",
+      "style",
       "textarea",
       "title",
       "ul"
@@ -49,6 +50,10 @@
       "btn-light",
       "btn-primary",
       "btn-xl",
+      "card",
+      "card-body",
+      "card-skill",
+      "col",
       "col-lg-3",
       "col-lg-4",
       "col-lg-6",
@@ -84,6 +89,7 @@
       "mb-lg-0",
       "ms-auto",
       "mt-0",
+      "mt-2",
       "mt-4",
       "mt-5",
       "my-2",
@@ -116,7 +122,6 @@
       "text-white"
     ],
     "ids": [
-      "contact",
       "contactForm",
       "email",
       "join-us",
