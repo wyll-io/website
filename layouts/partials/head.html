@@ -16,10 +16,13 @@
     {{ $bootstrapIcons := $bootstrapIcons | minify | fingerprint | resources.PostProcess }}
     {{ $googleFonts := resources.Get "css/google-fonts.css" }}
     {{ $googleFonts := $googleFonts | minify | fingerprint | resources.PostProcess }}
+    {{ $dinoCSS := resources.Get "css/dino.css" }}
+    {{ $dinoCSS := $dinoCSS | minify | fingerprint | resources.PostProcess }}
 
     <style>
         {{ $css.Content | safeCSS }}
         {{ $bootstrapIcons.Content | safeCSS }}
         {{ $googleFonts.Content | safeCSS }}
+        {{ $dinoCSS.Content | safeCSS }}
     </style>
 </head>

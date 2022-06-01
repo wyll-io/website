@@ -2,6 +2,7 @@
   "htmlElements": {
     "tags": [
       "a",
+      "audio",
       "b",
       "body",
       "br",
@@ -26,6 +27,7 @@
       "section",
       "span",
       "style",
+      "template",
       "title",
       "ul"
     ],
@@ -68,7 +70,10 @@
       "gx-4",
       "gx-lg-5",
       "h4",
+      "icon",
+      "icon-offline",
       "img-fluid",
+      "interstitial-wrapper",
       "justify-content-center",
       "masthead",
       "mb-0",
@@ -94,6 +99,8 @@
       "navbar-toggler",
       "navbar-toggler-icon",
       "navbar-toggler-right",
+      "niokbutton",
+      "offline",
       "page-section",
       "px-4",
       "px-lg-5",
@@ -101,6 +108,7 @@
       "py-5",
       "rounded-circle",
       "row",
+      "sendmessage",
       "small",
       "text-center",
       "text-info",
@@ -110,12 +118,24 @@
       "text-white"
     ],
     "ids": [
+      "audio-resources",
+      "dino",
       "join-us",
+      "main-content",
+      "main-frame-error",
       "mainNav",
+      "messageBox",
       "navbarResponsive",
+      "offline-resources",
+      "offline-resources-1x",
+      "offline-resources-2x",
+      "offline-sound-hit",
+      "offline-sound-press",
+      "offline-sound-reached",
       "our-skills",
       "our-stack",
       "page-top",
+      "t",
       "wyll-zone",
       "wyllosophie"
     ]
