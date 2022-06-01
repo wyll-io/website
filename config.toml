@@ -4,3 +4,29 @@ title = 'Wyll - DevOps Cloud Data - Toulouse - Montpellier - Bordeaux'
 
 [build]
   writeStats = true
+
+[deployment]
+
+[[deployment.targets]]
+name = "wyll.io"
+URL = "s3://wyll.io?region=eu-west-3"
+cloudFrontDistributionID = "EJ2J5SPU61EG8"
+
+[[deployment.matchers]]
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^sitemap\\.xml$"
+contentType = "application/xml"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
