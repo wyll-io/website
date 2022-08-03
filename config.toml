@@ -1,4 +1,4 @@
-baseURL = 'https://wyll.io/'
+baseURL = 'https://test.wyll.io/'
 languageCode = 'fr-fr'
 title = 'Wyll - DevOps Cloud Data - Toulouse - Montpellier - Bordeaux'
 
@@ -10,7 +10,7 @@ title = 'Wyll - DevOps Cloud Data - Toulouse - Montpellier - Bordeaux'
 [[deployment.targets]]
 name = "wyll.io"
 URL = "s3://wyll.io?region=eu-west-3"
-cloudFrontDistributionID = "EJ2J5SPU61EG8"
+cloudFrontDistributionID = "E2TAX61U0ZN76O"
 
 [[deployment.matchers]]
 pattern = "^.+\\.(js|css|svg|ttf)$"
