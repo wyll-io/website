@@ -8,8 +8,8 @@ title = 'Wyll - DevOps Cloud Data - Toulouse - Montpellier - Bordeaux'
 [deployment]
 
 [[deployment.targets]]
-name = "wyll.io"
-URL = "s3://wyll.io?region=eu-west-3"
+name = "test.wyll.io"
+URL = "s3://test.wyll.io?region=eu-west-3"
 cloudFrontDistributionID = "E2TAX61U0ZN76O"
 
 [[deployment.matchers]]
