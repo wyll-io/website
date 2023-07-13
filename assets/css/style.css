@@ -2448,7 +2448,7 @@ p {
 }
 .change::before {
   content: "DEVOPS.";
-  animation: animate infinite 5s;
+  animation: animate infinite 3s;
   padding-left: 10px;
 }
 
@@ -2462,9 +2462,6 @@ p {
       content: "CLOUD.";
   }
 
-  75% {
-      content: "DATA.";
-  }
 }
 .footer-style-2 .footer-widget .widget-title {
   color: #dbebeb;
@@ -3575,6 +3572,7 @@ p {
 .hm2-service-box {
   background-color: var(--white-color);
   border-radius: 15px;
+  height: 600px !important;
   padding: 50px;
 }
 
@@ -3716,6 +3714,9 @@ p {
 /************************ team section start **********************/
 .hm2-team-single .thumbnail {
   max-width: 270px;
+  min-width: 270px;
+  min-height: 270px;
+  max-height: 270px;
   display: inline-block;
   position: relative;
   z-index: 1;
