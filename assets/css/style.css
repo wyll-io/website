@@ -3754,7 +3754,8 @@ p {
 }
 
 .hm2-team-single .thumbnail:hover img {
-  content:url("../images/wyllers/dog.jpg");
+  content:url("../images/logos/wyll.PNG");
+  
   -webkit-animation: 0.35s flipimage ;
   animation: 0.35s flipimage ;
 }
