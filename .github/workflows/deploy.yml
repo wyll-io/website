@@ -20,7 +20,7 @@ jobs:
         role-session-name: MySessionName
         role-duration-seconds: 1200
     - name: Sync files to S3 bucket
-      run: aws s3 sync . s3://io.wyll/ --delete 
+      run: aws s3 sync . s3://io.wyll/ --delete --exclude ".github/*" --exclude ".gitignore" --exclude "README.md"
     # Clears the CloudFront cache so new requests will receive the latest version of your app
     - name: Invalidate Cloudfront
       uses: chetan/invalidate-cloudfront-action@v1.3
