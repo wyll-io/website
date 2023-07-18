@@ -22,6 +22,10 @@ jobs:
     - name: Sync files to S3 bucket
       run: aws s3 sync . s3://io.wyll/ --delete --exclude ".github/*" --exclude ".gitignore" --exclude "README.md"
     # Clears the CloudFront cache so new requests will receive the latest version of your app
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(secrets.AWS_SECRET_DISTRIBUTION) }}
+        run: echo "$GITHUB_CONTEXT"
     - name: Invalidate Cloudfront
       uses: docker://rewindio/github-action-cloudfront-invalidate
       env:
