@@ -23,7 +23,7 @@ jobs:
       run: aws s3 sync . s3://io.wyll/ --delete --exclude ".github/*" --exclude ".gitignore" --exclude "README.md"
     # Clears the CloudFront cache so new requests will receive the latest version of your app
     - name: Invalidate Cloudfront
-      uses: chetan/invalidate-cloudfront-action@v2
+      uses: chetan/invalidate-cloudfront-action@v1.3
       env:
         DISTRIBUTION: ${{ secrets.AWS_SECRET_DISTRIBUTION }}
         PATHS: '/*'
