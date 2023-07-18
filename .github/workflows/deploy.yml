@@ -27,9 +27,9 @@ jobs:
       env:
         DISTRIBUTION: 'd3hpylmk9a9vkn'
         PATHS: '/*'
-        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        role-session-name: MySessionName
-        role-duration-seconds: 1200
+        #role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        #role-session-name: MySessionName
+        #role-duration-seconds: 1200
         AWS_REGION: 'eu-west-3'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
