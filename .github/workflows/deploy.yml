@@ -25,7 +25,7 @@ jobs:
     - name: Invalidate Cloudfront
       uses: chetan/invalidate-cloudfront-action@v1.3
       env:
-        DISTRIBUTION: 'd3hpylmk9a9vkn'
+        DISTRIBUTION: 'arn:aws:cloudfront::819272382835:distribution/E33J6UZAJVOQ9V'
         PATHS: '/*'
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
         role-session-name: MySessionName
