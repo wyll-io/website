@@ -25,7 +25,7 @@ jobs:
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(secrets.AWS_SECRET_DISTRIBUTION) }}
-        run: echo "$GITHUB_CONTEXT"
+      run: echo "$GITHUB_CONTEXT"
     - name: Invalidate Cloudfront
       uses: docker://rewindio/github-action-cloudfront-invalidate
       env:
