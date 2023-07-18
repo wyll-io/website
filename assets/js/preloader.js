@@ -103,7 +103,7 @@ class DecayParticle {
         circle.setAttributeNS(null,"opacity","0");
         circle.setAttributeNS(null,"r",`${this.r}`);
         circle.setAttributeNS(null,"transform",`translate(0,${y})`);
-        circle.setAttributeNS(null,"fill","#0d4ef2");
+        circle.setAttributeNS(null,"fill","#132651");
 
         this.g = g;
         this.c = circle;
