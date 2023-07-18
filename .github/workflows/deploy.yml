@@ -22,14 +22,14 @@ jobs:
     - name: Sync files to S3 bucket
       run: aws s3 sync . s3://io.wyll/ --delete --exclude ".github/*" --exclude ".gitignore" --exclude "README.md"
     # Clears the CloudFront cache so new requests will receive the latest version of your app
-    - name: Invalidate Cloudfront
-      uses: chetan/invalidate-cloudfront-action@v2
-      env:
-        DISTRIBUTION: ${{ secrets.AWS_SECRET_DISTRIBUTION }}
-        PATHS: '/index.html'
-        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        role-session-name: MySessionName
-        role-duration-seconds: 1200
-        AWS_REGION: 'eu-west-3'
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+   # - name: Invalidate Cloudfront
+   #   uses: chetan/invalidate-cloudfront-action@v2
+   #   env:
+   #     DISTRIBUTION: ${{ secrets.AWS_SECRET_DISTRIBUTION }}
+   #     PATHS: '/index.html'
+   #     role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+   #     role-session-name: MySessionName
+   #     role-duration-seconds: 1200
+   #     AWS_REGION: 'eu-west-3'
+   #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+   #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
