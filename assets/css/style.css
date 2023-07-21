@@ -3951,28 +3951,29 @@ p {
 
 .case-study-box .case-images.active {
   display: block;
+  top:120px;
   -webkit-animation: 1s scale_fadeInUp;
   animation: 1s scale_fadeInUp;
 }
 
 .case-study-box .case-images.case-2 {
-  top: 60px;
+  top: 120px;
 }
 
 .case-study-box .case-images.case-3 {
-  top: 180px;
+  top: 120px;
 }
 
 .case-study-box .case-images.case-4 {
-  top: 250px;
+  top: 120px;
 }
 
 .case-study-box .case-images.case-5 {
-  top: 250px;
+  top: 120px;
 }
 
 .case-study-box .case-images.case-6 {
-  top: 250px;
+  top: 120px;
 }
 
 @media (max-width: 1199.98px) {
