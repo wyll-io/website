@@ -1,21 +1,26 @@
-name: Deploy
+name: Deploy website on AWS S3
 
 on:
   push:
-    branches: [master]
+    branches: [develop]
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v3
-    - run: npm install postcss-cli
-    - uses: peaceiris/actions-hugo@v2
-    - name: Generate static files
-      run: hugo --minify
-    - name: Deploy to AWS S3
-      run: hugo deploy --force --invalidateCDN
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: AWS authentication and role assume
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws-region: eu-west-3
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        role-session-name: MySessionName
+        role-duration-seconds: 1200
+    - name: Sync files to S3 bucket
+      run: aws s3 sync . s3://io.wyll/ --delete --exclude ".github/*" --exclude ".gitignore" --exclude "README.md"
+    # Clears the CloudFront cache so new requests will receive the latest version of your app
+    - name: Invalidate Cloudfront
+      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_SECRET_DISTRIBUTION }} --paths "/*"
