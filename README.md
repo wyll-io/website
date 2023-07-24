@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-<img width="350" src="https://github.com/wyll-io/website/blob/develop/assets/images/logos/logo-wyll.png" />
+<img width="350" src="https://github.com/wyll-io/website/blob/master/assets/images/logos/logo-wyll.png" />
 
 
 
