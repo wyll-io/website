@@ -22,29 +22,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="theme-color" content="#132651">
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('B3TQhslegytPfmnIb');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+
 </head>
 
 <body>
@@ -120,7 +98,7 @@
 
     <!--home section start-->
     <section class="hm2-hero-section position-relative z-1 overflow-hidden" id="accueil">
-        <img src="assets/images/shapes/bulb.png" alt="bulb" class="position-absolute bulb-shape z--1" width="4%">
+        <img src="assets/images/shapes/bulb.png" alt="bulb" class="position-absolute bulb-shape z--1">
         <img src="assets/images/shapes/hero-shape.png" alt="hero shape"
             class="hero-shape position-absolute z--1 end-0 top-0">
 
@@ -156,10 +134,9 @@
                     <div class="hm2-cta-left position-relative z-1">
                         <img src="assets/images/home/double-image.png" alt="double image" class="img-fluid d-xl-none">
                         <span class="circle-shape position-absolute z--1"></span>
-                        <img src="assets/images/events/meetupall-modified.png" alt="not found" width="100%"
+                        <img src="assets/images/events/meetupall-modified.png" alt="not found"
                             class="img-fluid cta-1 wow fadeInLeft">
-                        <img src="assets/images/home/cta-2.png" alt="not found" width="70%"
-                            class="img-fluid cta-2 wow fadeInRight">
+                        <img src="assets/images/home/cta-2.png" alt="not found" class="img-fluid cta-2 wow fadeInRight">
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -213,7 +190,8 @@
                         <span class="icon-wrapper">
                             <img src="assets/images/icons/devops.png" alt="icon" class="img-fluid">
                         </span>
-                        <p style="font-size: 24px; line-height: 34px;" class="mt-32">DEVOPS / SRE</p>
+                        <p style="font-size: 24px; line-height: 34px; color:#34679E;" class="mt-32 "><b>DEVOPS / SRE</b>
+                        </p>
                         <p class="mb-32 mt-4 fw-medium">Le DevOps est avant tout un état d'esprit, chez wyll nous sommes
                             des fervents défenseurs de l'automatisation et de l'intégration continue, nous opérons sur
                             la totalité de la chaine CI/CD en utilisant les
@@ -225,7 +203,7 @@
                         <span class="icon-wrapper">
                             <img src="assets/images/icons/cloud.png" alt="icon" class="img-fluid">
                         </span>
-                        <p style="font-size: 24px; line-height: 34px;"  class="mt-32">CLOUD</p>
+                        <p style="font-size: 24px; line-height: 34px;color:#34679E;" class="mt-32"><b>CLOUD</b></p>
                         <p class="mb-32 mt-4 fw-medium">De GCP en passant par AWS et Azure, nous intervenons sur toutes
                             les facettes du Cloud : IaaS, PaaS, SaaS et les différentes façons de l'implémenter, Public,
                             Privé, Hybride ou Communautaire.
@@ -239,7 +217,8 @@
                         <span class="icon-wrapper">
                             <img src="assets/images/icons/star.png" alt="icon" class="img-fluid">
                         </span>
-                        <p style="font-size: 24px; line-height: 34px;"  class="mt-32">SAVOIR FAIRE</p>
+                        <p style="font-size: 24px; line-height: 34px;color:#34679E;" class="mt-32"><b>SAVOIR FAIRE</b>
+                        </p>
                         <p class="mb-32 mt-4 fw-medium">
                             Chez Wyll, nous investissons constamment dans l'apprentissage, la recherche et le
                             développement pour rester à la pointe de la technologie et offrir les meilleures solutions.
@@ -275,7 +254,7 @@
                         <div class="col-xl-6">
 
                             <div class="img-left">
-                                <video title="Formation" preload="auto" autoplay muted>
+                                <video title="Formation " class="img-fluid" preload="auto" autoplay muted loop>
                                     <source src="assets/images/events/formation.mp4" type="video/mp4">
                                     <p>Formation</p>
                                 </video>
@@ -298,12 +277,13 @@
                                     <div class="cr-tab-counter-single">
                                         <h3 class="fw-semibold primary-text-color mb-0"><span
                                                 class="counter">77</span><span>+</span></h3>
-                                        <p class="fw-medium mb-0 fs-20" style="color: #34679E;">Certifications accessibles</p>
+                                        <p class="fw-medium mb-0 fs-20" style="color: #34679E;">Certifications
+                                            accessibles</p>
                                     </div>
                                     <div class="cr-tab-counter-single">
                                         <h3 class="fw-semibold primary-text-color mb-0"><span
                                                 class="counter">383</span><span>+</span></h3>
-                                        <p class="fw-medium mb-0 fs-20 "style="color: #34679E;">Cours disponibles</p>
+                                        <p class="fw-medium mb-0 fs-20 " style="color: #34679E;">Cours disponibles</p>
                                     </div>
                                 </div>
                             </div>
@@ -359,7 +339,8 @@
                                         <img src="assets/images/wyllers/Samih.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">Samih</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Samih</p>
                                             <span class="fw-medium fs-sm">Google Cloud Developer - Professional</span>
                                         </div>
                                     </div>
@@ -373,7 +354,8 @@
                                         <img src="assets/images/wyllers/Samih.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Samih</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Samih</p>
                                             <span class="fw-medium fs-sm">Google Cloud Solution Architect -
                                                 Associate</span>
                                         </div>
@@ -388,7 +370,8 @@
                                         <img src="assets/images/wyllers/Florian.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Florian</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Florian</p>
                                             <span class="fw-medium fs-sm">Scaleway Foundations - Professional</span>
                                         </div>
                                     </div>
@@ -402,7 +385,8 @@
                                         <img src="assets/images/wyllers/François.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">François</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                François</p>
                                             <span class="fw-medium fs-sm">Scaleway Foundations - Professional</span>
                                         </div>
                                     </div>
@@ -416,7 +400,8 @@
                                         <img src="assets/images/wyllers/Walid.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Walid</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Walid</p>
                                             <span class="fw-medium fs-sm">AWS Solutions Architect - Professional</span>
                                         </div>
                                     </div>
@@ -430,7 +415,8 @@
                                         <img src="assets/images/wyllers/ALfred.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Alfred</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Alfred</p>
                                             <span class="fw-medium fs-sm">Certified Kubernetes Administrator</span>
                                         </div>
                                     </div>
@@ -444,7 +430,8 @@
                                         <img src="assets/images/wyllers/ALfred.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Alfred</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Alfred</p>
                                             <span class="fw-medium fs-sm">Certified Kubernetes Application
                                                 Developer</span>
                                         </div>
@@ -459,7 +446,8 @@
                                         <img src="assets/images/wyllers/ALfred.jpg" width="70px" height="70px"
                                             alt="client" class="img-fluid rounded-circle">
                                         <div>
-                                            <p style="font-size: 30px; line-height: 40px;"  class="mb-0 fw-semibold">Alfred</p>
+                                            <p style="font-size: 30px; line-height: 40px;" class="mb-0 fw-semibold">
+                                                Alfred</p>
                                             <span class="fw-medium fs-sm">Certified Kubernetes Security
                                                 Specialist</span>
                                         </div>
@@ -521,10 +509,10 @@
                         <div class="cr-counter-circle">
                             <h4 class="mb-3">State of the Art</h4>
                             <p class="mb-0"
-                                style="font-size: 12px !important; margin-left: 5%; margin-right: 5%; font-weight: bold;">
-                                Nous aimons les passionnés et nous vous encourageons à vivre vos passions.
-                                Pour cela, Wyll accompagne ses équipes pour leur permettre de profiter pleinement de
-                                leurs passions (sport, jeux vidéos, échecs, mangas, pâtisserie, etc.) !
+                                style="font-size: 12px !important; margin-left: 8%; margin-right: 8%; font-weight: bold;">
+                                La technologie évolue toujours plus vite, c’est pourquoi nous sommes toutes et tous en
+                                veille technologique constante. Nos équipes sont formées sur les derniers outils en
+                                permanence et participent à des webinars et autres événements constamment.
 
                             </p>
                         </div>
@@ -664,7 +652,8 @@
                         <img src="assets/images/wyllers/Alexandre.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Alexandre</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Alexandre</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -673,7 +662,8 @@
                         <img src="assets/images/wyllers/ALfred.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Alfred</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Alfred</p>
 
                     <span class="fw-medium">Architecte Solution & Chief K8s Officer</span>
                 </div>
@@ -682,7 +672,8 @@
                         <img src="assets/images/wyllers/Anthonin.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Anthonin</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Anthonin</p>
 
                     <span class="fw-medium">Ingénieur DevOps / Cloud</span>
                 </div>
@@ -691,7 +682,8 @@
                         <img src="assets/images/wyllers/Antoine.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Antoine</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Antoine</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -700,7 +692,8 @@
                         <img src="assets/images/wyllers/Brice.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Brice</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Brice</p>
 
                     <span class="fw-medium">Tech lead DevOps</span>
                 </div>
@@ -709,7 +702,8 @@
                         <img src="assets/images/wyllers/Eyal.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Eyal</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Eyal</p>
 
                     <span class="fw-medium">DevOps Consultant</span>
                 </div>
@@ -718,7 +712,8 @@
                         <img src="assets/images/wyllers/Florentin.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Florentin</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Florentin</p>
 
                     <span class="fw-medium">Responsable d'agence</span>
                 </div>
@@ -727,7 +722,8 @@
                         <img src="assets/images/wyllers/Florian.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Florian</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Florian</p>
 
                     <span class="fw-medium">Expert DevOps & Cloud Openstack</span>
                 </div>
@@ -736,7 +732,8 @@
                         <img src="assets/images/wyllers/François.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">François</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        François</p>
 
                     <span class="fw-medium">Ingénieur DevSecOps</span>
                 </div>
@@ -745,7 +742,8 @@
                         <img src="assets/images/wyllers/GCH.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Guillaume</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Guillaume</p>
 
                     <span class="fw-medium">Directeur associé</span>
                 </div>
@@ -754,7 +752,8 @@
                         <img src="assets/images/wyllers/GGR.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Guillaume</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Guillaume</p>
 
                     <span class="fw-medium">Directeur associé</span>
                 </div>
@@ -763,7 +762,8 @@
                         <img src="assets/images/wyllers/Jordi.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Jordi</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Jordi</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -772,7 +772,8 @@
                         <img src="assets/images/wyllers/Léo.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Léo</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Léo</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -781,7 +782,8 @@
                         <img src="assets/images/wyllers/Lucas Ventura.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Lucas</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Lucas</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -790,7 +792,8 @@
                         <img src="assets/images/wyllers/Lucas VH.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Lucas</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Lucas</p>
 
                     <span class="fw-medium">Consultant DevTestOps</span>
                 </div>
@@ -799,7 +802,8 @@
                         <img src="assets/images/wyllers/Matthieu.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Matthieu</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Matthieu</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -808,7 +812,8 @@
                         <img src="assets/images/wyllers/Maxime.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Maxime</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Maxime</p>
 
                     <span class="fw-medium">Ingénieur SysOps</span>
                 </div>
@@ -817,7 +822,8 @@
                         <img src="assets/images/wyllers/Samih.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Samih</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Samih</p>
 
                     <span class="fw-medium">Architecte Logiciel Sénior</span>
                 </div>
@@ -826,7 +832,8 @@
                         <img src="assets/images/wyllers/Sébastien.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Sébastien</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Sébastien</p>
 
                     <span class="fw-medium">Tech lead DevOps</span>
                 </div>
@@ -835,7 +842,8 @@
                         <img src="assets/images/wyllers/Taylor.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Taylor</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Taylor</p>
 
                     <span class="fw-medium">Expert Java/DevOps/Cloud</span>
                 </div>
@@ -845,7 +853,8 @@
                             alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Thomas</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Thomas</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -854,7 +863,8 @@
                         <img src="assets/images/wyllers/Thomas CASSAN.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Thomas</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Thomas</p>
 
                     <span class="fw-medium">Ingénieur Python Sénior</span>
                 </div>
@@ -863,7 +873,8 @@
                         <img src="assets/images/wyllers/Walid.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Walid</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Walid</p>
 
                     <span class="fw-medium">Ingénieur DevSecOps</span>
                 </div>
@@ -872,7 +883,8 @@
                         <img src="assets/images/wyllers/Yohann.jpg" class="rounded-circle img-fluid" alt="team">
                     </div>
 
-                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">Yohann</p>
+                    <p style="font-size: 24px; color: #34679E;line-height: 34px; font-weight:700;" class="mt-40 mb-2">
+                        Yohann</p>
 
                     <span class="fw-medium">Ingénieur DevOps</span>
                 </div>
@@ -910,7 +922,8 @@
                             data-case="case-1" style="border-bottom: 1px solid var(--black-light);">
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Anniversaire Wyll 2 Ans</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">
+                                    Anniversaire Wyll 2 Ans</p>
 
                             </div>
                         </div>
@@ -918,7 +931,8 @@
                             data-case="case-2" style="border-bottom: 1px solid var(--black-light);">
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">1er Meet Up interne</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">1er
+                                    Meet Up interne</p>
                             </div>
 
                         </div>
@@ -926,7 +940,8 @@
                             data-case="case-3" style="border-bottom: 1px solid var(--black-light);">
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Wyll, Sponsor des MAC XV !</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Wyll,
+                                    Sponsor des MAC XV !</p>
 
                             </div>
 
@@ -935,7 +950,8 @@
                             data-case="case-4" style="border-bottom: 1px solid var(--black-light);">
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Spéléo Aventure</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">
+                                    Spéléo Aventure</p>
 
                             </div>
 
@@ -944,7 +960,8 @@
                             data-case="case-5" style="border-bottom: 1px solid var(--black-light);">
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">After Wyll</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">After
+                                    Wyll</p>
 
                             </div>
 
@@ -954,7 +971,8 @@
                             <div class="d-flex align-items-center gap-5 content-left">
                                 <span class="tag-btn">Wyll</span>
 
-                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Tout roule chez Wyll !</p>
+                                <p style="font-size: 24px; line-height: 34px;" class="mb-0 fw-semibold text-white">Tout
+                                    roule chez Wyll !</p>
 
                             </div>
 
@@ -1181,7 +1199,8 @@
                                     <span class="fs-sm fw-medium">8min de lecture</span>
                                 </div>
                                 <a href="https://blog.wyll.io/posts/is-it-the-last-daylight-saving.html">
-                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px"  class="my-4" ><b>Is it the last daylight saving ?</b></p>
+                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4"><b>Is
+                                            it the last daylight saving ?</b></p>
                                 </a>
                                 <div class="categories d-flex align-items-center gap-3 flex-wrap">
                                     <a href="#">Linux</a>
@@ -1205,7 +1224,8 @@
                                     <span class="fs-sm fw-medium">6min de lecture</span>
                                 </div>
                                 <a href="https://blog.wyll.io/posts/cloud-without-cloud-provider.html">
-                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4" ><b>A cloud without cloud provider</b></p>
+                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4"><b>A
+                                            cloud without cloud provider</b></p>
                                 </a>
                                 <div class="categories d-flex align-items-center gap-3 flex-wrap">
                                     <a href="#">Openstack</a>
@@ -1229,7 +1249,8 @@
                                     <span class="fs-sm fw-medium">4min de lecture</span>
                                 </div>
                                 <a href="https://blog.wyll.io/posts/what-is-devops.html">
-                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4" ><b>Introduction to DevOps</b></p>
+                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4">
+                                        <b>Introduction to DevOps</b></p>
                                 </a>
                                 <div class="categories d-flex align-items-center gap-3 flex-wrap">
                                     <a href="#">Devops</a>
@@ -1253,7 +1274,8 @@
                                     <span class="fs-sm fw-medium">4min de lecture</span>
                                 </div>
                                 <a href="https://blog.wyll.io/posts/how-do-we-deploy-our-blog.html">
-                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4" ><b>How do we build and deploy our blog ?</b></p>
+                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px" class="my-4"><b>How
+                                            do we build and deploy our blog ?</b></p>
                                 </a>
                                 <div class="categories d-flex align-items-center gap-3 flex-wrap">
                                     <a href="#">AWS</a>
@@ -1277,7 +1299,8 @@
                                     <span class="fs-sm fw-medium">6min de lecture</span>
                                 </div>
                                 <a href="https://blog.wyll.io/posts/begin-with-aws-and-golang.html">
-                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px " class="my-4" ><b>Begin with AWS and Golang</b></p>
+                                    <p style="font-size: 24px; line-height: 34px; min-height: 68px " class="my-4">
+                                        <b>Begin with AWS and Golang</b></p>
                                 </a>
                                 <div class="categories d-flex align-items-center gap-3 flex-wrap">
                                     <a href="#">AWS</a>
@@ -1429,7 +1452,7 @@
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget schedule-widget">
-                            <span  class="widget-title">Expertises</span>
+                            <span class="widget-title">Expertises</span>
                             <ul class="schedule-list">
                                 <li>DevOps</li>
                                 <li>Cloud</li>
@@ -1474,6 +1497,29 @@
     <!--scrolltop button end-->
 
     <!--Esential Js Files-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('B3TQhslegytPfmnIb');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
