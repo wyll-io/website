@@ -3761,7 +3761,7 @@ p {
 }
 
 .hm2-team-single .thumbnail:hover img {
-  content:url("../images/logos/wyll.PNG");
+  content:url("../images/logos/wyll.webp");
   
   -webkit-animation: 0.35s flipimage ;
   animation: 0.35s flipimage ;
